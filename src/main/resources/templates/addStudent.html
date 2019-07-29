@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Add a student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<h1>Add a student</h1>
+
+<div>
+    <form th:action="@{/save}" th:object="${student}" th:method="post">
+        <input th:field="*{firstName}" th:type="text" class="form-control" placeholder="Firstname"/>
+        <div style="clear: both; display: block; height: 10px;"></div>
+        <input th:field="*{lastName}" th:type="text" class="form-control" placeholder="Lastname"/>
+        <div style="clear: both; display: block; height: 10px;"></div>
+        <input th:field="*{department}" th:type="text" class="form-control" placeholder="Department"/>
+        <div style="clear: both; display: block; height: 10px;"></div>
+        <input th:field="*{email}" th:type="text" class="form-control" placeholder="Email"/>
+
+        <div style="clear: both; display: block; height: 10px;"></div>
+        <input type="submit" value="ACCEPT" class=" btn btn-success">
+    </form>
+
+</div>
+
+</body>
+</html>

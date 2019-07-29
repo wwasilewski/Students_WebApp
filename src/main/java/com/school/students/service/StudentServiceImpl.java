@@ -42,11 +42,6 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> findStudentByLastname(String lastname) {
-        return studentRepository.findByLastName(lastname);
-    }
-
-    @Override
     public void addStudent(Student student) {
         studentRepository.save(student);
     }

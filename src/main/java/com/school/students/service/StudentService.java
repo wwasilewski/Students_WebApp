@@ -16,9 +16,6 @@ public interface StudentService {
     // method to find student by id
     Student findStudentById(Long studentId);
 
-    // method to find student by lastname
-    List<Student> findStudentByLastname(String lastname);
-
     // method to add a student
     void addStudent(Student student);
 
