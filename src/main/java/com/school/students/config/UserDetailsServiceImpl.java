@@ -23,6 +23,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return appUserRepository.findByUsername(s);
+        if (s.equals("user") || s.equals("admin")) {
+            return appUserRepository.findByUsername(s);
+        } else {
+            throw new UsernameNotFoundException("Not found");
+        }
     }
 }
